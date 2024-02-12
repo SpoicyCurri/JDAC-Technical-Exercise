@@ -9,15 +9,15 @@ TFL_CYCLE_LANES_URL = "https://cycling.data.tfl.gov.uk/CyclingInfrastructure/dat
 
 st.title('Bike Points in London')
 
-data_load_state = st.text('Loading data...')
+data_load_state = st.info('Loading initial data into app...', icon="ℹ️")
 bike_points = load_bike_points_data(BIKE_POINTS_URL)
 london_boroughs = load_london_borough_bondaries_data(LAD_BOUNDARY_URL)
 cycle_lanes = load_cycle_lane_data(TFL_CYCLE_LANES_URL)
-data_load_state.text('Loading data...done!')
-
-st.subheader('Bike Points Datatable')
-st.write(bike_points)
+data_load_state.info('Data loaded successfully! This has been cached and will not be loaded again.')
 
 st.subheader('Map of all bike point locations')
 map_fig = pydeck_map(bike_points, london_boroughs, cycle_lanes)
 st.pydeck_chart(map_fig)
+
+st.subheader('Bike Points Datatable')
+st.write(bike_points)

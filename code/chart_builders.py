@@ -22,7 +22,7 @@ def pydeck_map(bike_points, london_boroughs, cycle_lanes):
                 get_line_color=[255,255,255],
                 getLineWidth=10,
                 lineWidthMinPixels=1,
-                pickable=True
+                pickable=False
                 ),
             pdk.Layer(
                 'GeoJsonLayer',
@@ -31,7 +31,7 @@ def pydeck_map(bike_points, london_boroughs, cycle_lanes):
                 get_line_color=[255,153,51],
                 getLineWidth=5,
                 lineWidthMinPixels=1,
-                pickable=True
+                pickable=False
                 )
             ],
         tooltip={"html": "<b>Location:</b> {commonName}"}

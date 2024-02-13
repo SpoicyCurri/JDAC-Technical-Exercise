@@ -30,9 +30,9 @@ The code is designed to run with minimal setup. One simply needs to:
 
 ## Description
 This repository brings together 3 datasets:
-* The locations of TFL rental Bike Point pickups
-* Boundaries for the London Boroughs using ONS Local Authority Districts
-* The cycling road network as defined by TFL
+* The locations of [Santander rental Bike Point pickups](https://api-portal.tfl.gov.uk/api-details#api=BikePoint&operation=BikePoint_GetAll)
+* Boundaries for the London Boroughs using [ONS Local Authority Districts](https://geoportal.statistics.gov.uk/datasets/8148555d1e104ead8887b7939eb47ab3_0/explore?location=55.216063%2C-3.316939%2C6.85)
+* The [cycling road network](https://cycling.data.tfl.gov.uk/) as defined by TFL
 
 The TFL bike point locations closely follow the boundaries of Zone 1 and Zone 2 London transport regions. Increasing accessibility of the bikes to locations in Zone 3 and beyond, would undoubtly increase uptake of cycling in those zones.
 

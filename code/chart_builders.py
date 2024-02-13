@@ -1,5 +1,8 @@
 import pydeck as pdk
 
+### Functions for building map ###
+
+# This function builds a visual layer for each dataset and combines them into a single visual
 def pydeck_map(bike_points, london_boroughs, cycle_lanes):
     fig = pdk.Deck(
         map_style=None,
@@ -34,6 +37,7 @@ def pydeck_map(bike_points, london_boroughs, cycle_lanes):
                 pickable=False
                 )
             ],
+        # Tooltip only works with dataframes... and only works with a single layer
         tooltip={"html": "<b>Location:</b> {commonName}"}
     )
 

@@ -2,6 +2,10 @@ import streamlit as st
 import requests
 import pandas as pd
 
+### Functions for loading data ###
+
+# All functions load data from a url, perform some basic manipulations, and returns a dataset
+
 @st.cache_data
 def load_bike_points_data(url):
     r = requests.get(url)
@@ -20,6 +24,7 @@ def load_london_borough_bondaries_data(url):
     r = requests.get(url)
     json = r.json()
 
+    # Filters local authority districts for London boroughs only
     new_features = list()
     for i in range(len(json['features'])):
         temp = json['features'][i]
@@ -28,6 +33,10 @@ def load_london_borough_bondaries_data(url):
     json['features'] = new_features
     return json
 
+
+### Functions for processing data ###
+
+# Filters cycle lane dataset for routes that are segregated from lanes used by other vehicles
 def filter_cycle_lanes(data):
     new_features = list()
     for i in range(len(data['features'])):

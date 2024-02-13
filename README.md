@@ -10,7 +10,7 @@ The dashboard should look like this when produced:
 
 ## Setup
 The code is designed to run with minimal setup. One simply needs to:
-* Clone the repository to your local device
+* Clone the repository to your local device and `cd` into the directory
 * Download a recent version of python such as [python v3.12.2](https://www.python.org/downloads/)
 * Setup a virtual environment: 
 
